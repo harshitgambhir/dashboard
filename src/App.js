@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import DataProvider from "./context/DataContext";
@@ -7,9 +7,19 @@ import Products from './pages/Products';
 import Orders from './pages/Orders';
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
+import {
+  Link,
+  useLocation
+} from "react-router-dom";
 
 function CustomRoute({ children, ...rest }) {
+  const location = useLocation();
   const [collapsed, setCollapsed] = useState(true);
+  useEffect(() => {
+    if(!collapsed){
+      setCollapsed(true);
+    }
+  }, [location.pathname])
   return (
     <Route
       {...rest}
