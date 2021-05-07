@@ -1,36 +1,11 @@
 import React from "react";
 import {Line} from 'react-chartjs-2';
 
-let config = {
+export default function CardBarChart({title, data}) {
+  let config = {
     type: "line",
     height: 350,
-    data: {
-      labels: [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-      ],
-      datasets: [
-        {
-          label: new Date().getFullYear(),
-          backgroundColor: "#3182ce",
-          borderColor: "#3182ce",
-          data: [65, 78, 66, 44, 56, 67, 75],
-          fill: false,
-        },
-        {
-          label: new Date().getFullYear() - 1,
-          fill: false,
-          backgroundColor: "#ed64a6",
-          borderColor: "#ed64a6",
-          data: [40, 68, 86, 74, 56, 60, 87],
-        },
-      ],
-    },
+    data: data,
     options: {
       maintainAspectRatio: false,
       responsive: true,
@@ -102,8 +77,6 @@ let config = {
       },
     },
 };
-
-export default function CardBarChart() {
   return (
     <>
       <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow rounded">
@@ -111,7 +84,7 @@ export default function CardBarChart() {
           <div className="flex flex-wrap items-center">
             <div className="relative w-full max-w-full flex-grow flex-1">
               <h2 className="text-blueGray-700 text-xl font-semibold">
-                Total sales
+                {title}
               </h2>
             </div>
           </div>

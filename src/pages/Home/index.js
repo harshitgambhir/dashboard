@@ -75,10 +75,64 @@ const Home = () => {
       </div>
       <div className="flex flex-wrap mt-12">
         <div className="w-full xl:w-6/12 px-4">
-          <BarChart />
+          <BarChart title="Total orders" data={{
+            labels: [
+              "January",
+              "February",
+              "March",
+              "April",
+              "May",
+              "June",
+              "July",
+            ],
+            datasets: [
+              {
+                label: new Date().getFullYear(),
+                backgroundColor: "#a855f7",
+                borderColor: "#a855f7",
+                data: [30, 78, 56, 34, 100, 45, 13],
+                fill: false,
+                barThickness: 8,
+              },
+              {
+                label: new Date().getFullYear() - 1,
+                fill: false,
+                backgroundColor: "#38bdf8",
+                borderColor: "#38bdf8",
+                data: [27, 68, 86, 74, 10, 4, 87],
+                barThickness: 8,
+              },
+            ],
+          }}/>
         </div>
         <div className="w-full xl:w-6/12 mt-12 xl:mt-0 px-4">
-          <LineChart />
+          <LineChart title="Total sales" data={{
+            labels: [
+              "January",
+              "February",
+              "March",
+              "April",
+              "May",
+              "June",
+              "July",
+            ],
+            datasets: [
+              {
+                label: new Date().getFullYear(),
+                backgroundColor: "#a855f7",
+                borderColor: "#a855f7",
+                data: [65, 78, 66, 44, 56, 67, 75],
+                fill: false,
+              },
+              {
+                label: new Date().getFullYear() - 1,
+                fill: false,
+                backgroundColor: "#38bdf8",
+                borderColor: "#38bdf8",
+                data: [40, 68, 86, 74, 56, 60, 87],
+              },
+            ],
+          }}/>
         </div>
       </div>
     </div>
