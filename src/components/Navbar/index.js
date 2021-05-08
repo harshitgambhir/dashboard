@@ -9,14 +9,8 @@ import {
 const Navbar = ({collapsed, setCollapsed}) => {
   const location = useLocation();
   return (
-    <nav className={`${collapsed ? 'hidden' : 'block'} md:block left-0 fixed top-0 bottom-0 overflow-y-auto flex-row flex-nowrap overflow-hidden shadow bg-white items-center justify-between w-64 z-10 py-4 px-6`}>
+    <nav className={`${collapsed ? '-translate-x-full' : 'translate-x-0'} transform ease-in-out transition-all duration-300 md:translate-x-0 left-0 fixed top-0 bottom-0 overflow-y-auto flex-row flex-nowrap overflow-hidden shadow bg-white items-center justify-between w-64 z-10 py-4 px-6`}>
       <div className="flex-col items-stretch min-h-full flex-nowrap px-0 flex justify-between w-full mx-auto">
-        <button
-          className="cursor-pointer text-black opacity-50 hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
-          type="button"
-        >
-          <i className="fas fa-bars"></i>
-        </button>
         <div className="flex flex-row justify-between">
           <Link
             className="block text-left text-blueGray-600 mr-0 whitespace-nowrap text-sm uppercase font-bold p-4"
@@ -24,7 +18,7 @@ const Navbar = ({collapsed, setCollapsed}) => {
           >
             Dashboard
           </Link>
-          <button onClick={() => setCollapsed(true)} className="cursor-pointer md:hidden p-3 text-xl leading-none outline-none">
+          <button onClick={() => setCollapsed(true)} className="focus:outline-none cursor-pointer md:hidden p-3 text-xl leading-none outline-none">
             <FontAwesomeIcon icon={faTimes} />
           </button>
         </div>

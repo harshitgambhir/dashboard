@@ -119,7 +119,7 @@ const Form = ({title, onSubmit, onCancel, values}) => {
                 Cancel
               </button>
               <button
-                className="ml-2 bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-4 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                className="ml-2 bg-lightBlue-500 text-white active:bg-lightBlue-600 text-xs font-bold uppercase px-4 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                 type="button"
                 onClick={handleSubmit}
               >
@@ -189,10 +189,10 @@ const Products = () => {
           <button onClick={() => {
             setIsEditModalVisible(true)
             setEditId(record.id)
-          }} className="flex-shrink-0 outline-none focus:outline-none text-indigo-500 text-sm rounded">
+          }} className="flex-shrink-0 outline-none focus:outline-none text-lightBlue-500 text-sm rounded">
             Edit
           </button>
-          <button onClick={() => handleDelete(record.id)} className="flex-shrink-0 outline-none focus:outline-none text-indigo-500 text-sm ml-4 rounded">
+          <button onClick={() => handleDelete(record.id)} className="flex-shrink-0 outline-none focus:outline-none text-lightBlue-500 text-sm ml-4 rounded">
             Delete
           </button>
         </div>
@@ -210,7 +210,7 @@ const Products = () => {
           extra={
             <button
               onClick={() => setIsAddModalVisible(true)}
-              className="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+              className="bg-lightBlue-500 text-white active:bg-lightBlue-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
               type="button"
             >
               Add Product

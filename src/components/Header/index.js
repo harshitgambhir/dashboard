@@ -8,7 +8,7 @@ const Header = ({setCollapsed}) => {
   return (
     <nav className=" w-full bg-transparent flex-row flex-nowrap justify-start flex items-center">
       <div className="w-full items-center flex justify-between flex-nowrap md:px-10">
-        <button onClick={() => setCollapsed(false)} className="p-4 cursor-pointer md:hidden text-xl leading-none outline-none">
+        <button onClick={() => setCollapsed(false)} className="focus:outline-none p-4 cursor-pointer md:hidden text-xl leading-none outline-none">
           <FontAwesomeIcon icon={faBars} />
         </button>
         <div className="flex-row flex justify-center items-center md:ml-auto p-4">
