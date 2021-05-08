@@ -51,7 +51,7 @@ const Orders = () => {
 
   return (
     <div className="px-4 md:px-10 mx-auto w-full">
-      <div className="w-full px-4">
+      <div className="w-full">
         <Table
           title="Orders"
           columns={columns}

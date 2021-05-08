@@ -44,11 +44,11 @@ const Home = () => {
   ];
   return (
     <div className="px-4 md:px-10 mx-auto w-full">
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap -mx-2">
         {data.map((menu, index) => {
           return (
-            <div key={index} className="w-full sm:w-6/12 xl:w-3/12 px-4">
-              <div className="flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow">
+            <div key={index} className="w-full sm:w-6/12 xl:w-3/12 my-2 px-2">
+              <div className="flex flex-col min-w-0 break-words bg-white rounded shadow">
                 <div className="flex-auto p-4">
                   <div className="flex flex-wrap">
                     <div className="w-full pr-4 max-w-full flex-grow flex-1">
@@ -73,8 +73,8 @@ const Home = () => {
           );
         })}
       </div>
-      <div className="flex flex-wrap mt-12">
-        <div className="w-full xl:w-6/12 px-4">
+      <div className="flex flex-wrap -mx-2 mt-4">
+        <div className="w-full xl:w-6/12 my-2 px-2">
           <BarChart title="Total orders" data={{
             labels: [
               "January",
@@ -105,7 +105,7 @@ const Home = () => {
             ],
           }}/>
         </div>
-        <div className="w-full xl:w-6/12 mt-12 xl:mt-0 px-4">
+        <div className="w-full xl:w-6/12 my-2 px-2">
           <LineChart title="Total sales" data={{
             labels: [
               "January",

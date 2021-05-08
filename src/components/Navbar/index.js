@@ -19,7 +19,7 @@ const Navbar = ({collapsed, setCollapsed}) => {
         </button>
         <div className="flex flex-row justify-between">
           <Link
-            className="block text-left pb-2 text-blueGray-600 mr-0 whitespace-nowrap text-sm uppercase font-bold p-4 px-4"
+            className="block text-left text-blueGray-600 mr-0 whitespace-nowrap text-sm uppercase font-bold p-4"
             to="/"
           >
             Dashboard
