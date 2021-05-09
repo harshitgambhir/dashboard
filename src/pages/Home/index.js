@@ -52,12 +52,12 @@ const Home = () => {
                 <div className="flex-auto p-4">
                   <div className="flex flex-wrap">
                     <div className="w-full pr-4 max-w-full flex-grow flex-1">
-                      <h5 className="text-blueGray-400 font-bold text-xs">
+                      <div className="text-blueGray-600 font-bold text-xs">
                         Total {menu.entry}
-                      </h5>
-                      <span className="font-semibold text-xl text-blueGray-700">
+                      </div>
+                      <div className="mt-1 font-black text-3xl text-blueGray-700">
                         {menu.entry === 'Sales' ? `₹${menu.count}` : menu.count}
-                      </span>
+                      </div>
                     </div>
                     <div className="w-auto pl-4 flex-initial">
                       <div
